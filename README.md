@@ -2,7 +2,6 @@
 
 ## Features
 
-- Live Match Updates: Real-time scores, match events, and statistics during ongoing games.
 - Fixture and Results: Comprehensive schedule of upcoming matches and results of past games.
 - Team Profiles: Detailed information about teams, including rosters, history, and achievements.
 - Player Profiles: Statistics, biographies, and performance metrics for individual players.
