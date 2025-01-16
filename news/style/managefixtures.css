@@ -1,0 +1,177 @@
+@import url('../../common/AdminMenu.css');
+*{
+    box-sizing: border-box;
+
+}
+.wrapper{
+    width: 100%;
+    height: max-content;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10vh;
+}
+main{
+    width: 80%;
+    justify-self: center;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0px 0px 2px 2px rgb(180, 180, 180);
+    border-radius: 10px;
+    gap: 3vh;
+    padding: 1vw 2vw;  
+}
+main header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1vw;
+    height: 10%;
+    width: 100%;
+    border-radius: 10px;
+   
+}
+header button{
+    background-color: white;
+    padding: 3px;
+    border-radius:5px ;
+    border-radius: 10px;
+    border: 1px solid grey ;
+    box-shadow: 0px 0px 1px 1px rgb(172, 172, 172);
+}
+header img{
+    width: 1.2rem;
+
+}
+header input{
+    width: 60%;
+    border-radius: 10px 0px 0px 10px;
+    font-size: 1.3rem;
+    
+    border: 1px solid rgb(175, 175, 175);
+    padding-left: 1rem;
+
+    box-shadow: 0px 0px 1px 1px rgb(180, 180, 180);
+}
+header input+button{
+    border-radius: 0px 10px 10px 0px;
+}
+header input+button+button{
+    justify-self: flex-end;
+    align-self: flex-end;
+    margin-left: 20vw;
+    
+}
+main .fixture{
+    display: flex;
+    width: 100%;
+    height: max-content;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    gap: 5px;
+    border: 1px solid rgb(185, 185, 185);
+    padding: 5px 10px;
+    box-shadow: 0px 0px 2px 2px rgb(180, 180, 180);
+}
+main .fixture:hover{
+    border: 1px solid rgb(73, 161, 78);
+    box-shadow: 0px 0px 2px 2px rgb(174, 184, 82);
+}
+.fixture .logo{
+    width: 10vh;
+}
+.fixture .icon{
+    width: 40px;
+    background-color: rgb(172, 172, 172);
+    border-radius: 10px;
+    padding: 5px;
+    border: 2px solid yellow;
+}
+.fixture #save{
+    display: none;
+    border: 1px solid green;
+    border-radius: 10px;
+    padding: 3px 5px;
+    box-shadow: 0px 0px 1px 1px grey;
+}
+input#submit{
+    border: 1px solid green;
+    background-color: white;
+    font-size: 1.2rem;
+    padding: 2rem 2.5rem;
+    border-radius: 10px;
+    padding: 3px 5px;
+    box-shadow: 0px 0px 1px 1px grey;
+}
+input#submit:hover{
+    background-color: green;
+    border: none;
+    color: yellow;
+
+}
+.fixture .icon:hover{
+background-color: green;
+border: none;
+}
+div.icons {
+    display: flex;
+    gap: 10px;
+}
+.fixture h3{
+    padding: 0px;
+    margin: .3rem;
+}
+.fixture input{
+    display: none;
+}
+#fixtureadd {
+    display: none;
+}
+.cover{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(41, 41, 41, 0.459);
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.cover .addFixture{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    width: 60vw;
+    height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px 2px grey;
+}
+.cover input{
+    width: 60%;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    border: 1px solid rgb(175, 175, 175);
+    padding-left: 1rem;
+    margin-bottom: 5%;
+    box-shadow: 0px 0px 1px 1px rgb(180, 180, 180);
+ 
+}
+.cover h2{
+    padding: 0px;
+    margin: 0px;
+}
+@media (orientation:portrait) {
+   main .fixture{
+        padding: 4vh 4px;
+        gap: .5vh;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,158 @@
+@import url('../../common/AdminMenu.css');
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    word-spacing: 9px;
+    /* background-color: red; */
+}
+body{
+
+    /* background-image: url('../img/beforeGame.jpg'); */
+    background-color: gainsboro;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.wrapper{
+    background-color: transparent;
+    display: grid;
+    gap: 10vh;
+    margin-top: 10vh;
+    align-items: center;
+    justify-content: center;
+    padding: 10vh;
+    grid-template-areas: 'main aside';
+}
+.wrapper main{
+    background-color: rgb(255, 255, 255);
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 2px rgb(255, 255, 255);
+    border-radius: 20px;
+}
+main section{
+    display: flex;
+    gap: 10%;
+    padding: 3%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.8vw;
+    grid-area: section;
+   
+    }
+main section figure {
+    width: max-content;
+    /* background-color: green; */
+}
+main section figure img.logo{
+    width: 10vw;
+}
+main .vs{
+    font-size: 10vw;
+    background-image: linear-gradient(180deg,red,black);
+    background-clip: text;
+    color: transparent;
+}
+button{
+    background-color: white;
+    border: none;
+    font-size: 2.5vw;
+    margin: 3vh;
+    background-color: rgb(255, 255, 255);
+    color: green;
+    border: 1px solid yellow;
+    padding: 2px 4vw;
+    border-radius: 20px;
+    word-spacing: .1rem;
+    box-shadow: 2px 2px 2px grey;
+    
+}
+form button:hover{
+    color: yellow;
+    background-color: green;
+    border: none;
+
+}
+input {
+    display: none;
+}
+.wrapper aside{
+    display: flex;
+}
+aside{
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+    border: 1px solid green;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    grid-area: aside;
+}
+aside section{
+    display: flex;
+    gap: 10%;
+    padding: 3%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1vw;
+    }
+aside .vs{
+    font-size: 2vw;
+    background-image: linear-gradient(180deg,red,black);
+    background-clip: text;
+    color: transparent;
+}
+aside button{
+    background-color: white;
+    border: none;
+    font-size: 2.5vw;
+    margin: 3vh;
+    background-color: green;
+    color: yellow;
+    border: 1px solid yellow;
+    padding: 2px 5px;
+    border-radius: 20px;
+    word-spacing: .1rem;
+    box-shadow: 2px 2px 2px grey;
+    
+}
+main button:hover{
+    background-color: yellow;
+    color: green;
+    border: 1px solid green;
+
+}
+@media (max-width:768px) {
+    .wrapper{
+        padding: 1vw;
+        width: 100vw;
+        grid-template-areas: 'main'' aside';
+    }
+   .wrapper main{
+        width: 80vw;
+    }
+    .wrapper aside section {
+        font-size: .8rem;
+    }
+    aside .vs{
+        font-size: 1rem;
+    }
+    
+}

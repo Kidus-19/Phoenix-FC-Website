@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.wrapper{
+    width: 90%;
+    height: 100vh;
+    box-sizing: content-box;
+    position: relative;
+    left: 51%;
+    align-self: center;
+}
+header{
+    background-color: transparent;
+    height: 80px;
+    width: 90%;
+    left: 5%;
+    top: 0;   
+    display: grid;
+    position: fixed;
+    grid-template-areas: 'logo . . nav';
+
+}
+header figure.logo{
+    margin: 0;
+}
+header figure.logo img{
+    width: 100px;
+    grid-area: logo;
+}
+header nav{
+    grid-area: nav;
+    margin: 0;
+}
+ nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+header nav ul li a{
+    font-size: 1.2rem;
+    padding: 10px 10px;
+    
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+header nav ul li a:hover{
+    animation-name: navhover;
+    animation-duration: 0.5s;
+    background-color: red;
+    color: white;
+    
+}
+@keyframes navhover {
+    from{background-color: transparent; color: black;}
+    to{background-color: red;}
+}
+
+img.menu{
+    display: none;
+}
+footer{
+    position: absolute;
+    top: 100vh;
+}
+
+@media (max-width:768px) {
+    header nav {
+        display: none;
+    }
+    img.menu{
+        display: block;
+        background-color: rgb(255, 72, 0);
+        width:40px;
+        position: fixed;
+        left: 80vw;
+        margin-top: 20px;
+        grid-area: nav;
+    }
+    img.menu:hover~nav{
+        display: block;
+        width: min-content;
+        flex-direction: row;
+        height: max-content;
+        background-color: rgb(59, 59, 59);
+    }
+    
+}
