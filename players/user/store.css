@@ -1,0 +1,94 @@
+
+
+  /* ============== Merchandise Section(store-section)  ============ */
+  .store-section{
+    margin-top: 50px;
+    padding: 50px;
+    background-color: #F79327;
+    /* transform: rotate(3deg); */
+  }
+  
+  .store-heading {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
+  .store-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+  
+  .store-item {
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.5s ease;
+  }
+  
+  .store-item img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .store-item.active {
+    transform: scale(1.2);
+    z-index: 1;
+  }
+  
+  .store-item-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .store-item-desc {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .prev-button,
+  .next-button {
+    position: relative;
+    padding-top: 50px;
+    /*  position: absolute;
+        top: 50%;    
+    */
+    transform: translateY(-50%);
+    font-size: 36px;
+    border: none;
+    background-color: transparent;
+    color: #FF6000;
+    cursor: pointer;
+  }
+  
+  .prev-button {
+    position: absolute;
+    left: 0;
+  }
+  
+  .next-button {
+    position: absolute;
+    right: 0;
+  }
+  
+  .store-button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFA559;
+    color: black;
+    transition: background-color 0.3s ease;
+  }
+  
+  .store-button:hover {
+    background-color: #FF6000;
+  }
+

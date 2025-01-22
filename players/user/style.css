@@ -1,0 +1,274 @@
+
+@media (min-width:345px) and (max-width:768px){
+    *{
+        margin:0;
+        border: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+
+    }
+    img{
+        
+       background-image:radial-gradient(orange,rgb(146, 78, 0));
+       width: 100%;
+    }
+
+    h1{
+        text-align: center;
+        width: 100%;
+        background-color: orange;
+        margin-top: 15px;
+        margin-bottom: 15px;
+
+    }
+    
+h3{
+        text-align: center;
+        font-size: 24px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-variant: small-caps;
+        background-color: black;
+        color: #fff;
+        width: 100%;
+        margin: 10px;
+     }
+    
+    .gk{
+        display: grid;
+        grid-template-rows: repeat(auto,2fr);
+        gap: 20px;
+       }
+       .def,.mid,.forw{
+        display: grid;
+        gap: 20px;
+       }
+       .gk div{
+        background-image:radial-gradient(orange,rgb(146, 78, 0));
+       }
+       .forw div{
+        background-image:radial-gradient(orange,rgb(146, 78, 0));
+       }
+       .mid div{
+        background-image:radial-gradient(orange,rgb(146, 78, 0));
+       }
+
+       .def div{
+        background-image:radial-gradient(orange,rgb(146, 78, 0));
+       }
+      
+.item-1{
+   grid-column: 1;
+   grid-row: 1;
+}
+.item-2{
+    grid-column: 1;
+    grid-row: 2;
+}
+.item-3{
+    grid-column: 1;
+    grid-row: 3;
+}
+
+}
+ @media(min-width:769px){
+    *{
+        margin:0;
+        border: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+    img{
+        margin: 20px;
+        width: 100%;
+        background-image:radial-gradient(orange,rgb(146,78,0));
+    }
+    h1{
+        text-align: center;
+        background-color: orange;
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    
+    h3{
+        text-align: center;
+        font-size: 24px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-variant: small-caps;
+        background-color: black;
+        color: #fff;
+        width: 100%;
+        margin: 10px;
+     }
+
+     .gk{
+        display: grid;
+        grid-template-areas: 'gkone gktwo ';
+        gap: 20px;
+    
+    }
+    
+    .def{
+        display: grid;
+        grid-template-areas: 'one two'
+                              'three four'
+                              'five six';
+        gap: 20px;
+    }
+    .mid{
+        display: grid;
+        grid-template-areas: 'midone midtwo '
+                              'midthree midfour'
+                              'midfive midsix';
+        gap: 20px;
+    }
+    .forw{
+        display: grid;
+        grid-template-areas: 'forone fortwo'
+                              'forthree forfour'
+                              'forfive forsix';
+        gap: 20px;
+    }
+    .gk div{
+        background-image:radial-gradient(orange,rgb(146, 78, 0));
+       }
+       .forw div{
+        background-image:radial-gradient(orange,rgb(146, 78, 0));
+       }
+       .mid div{
+        background-image:radial-gradient(orange,rgb(146, 78, 0));
+       }
+
+       .def div{
+        background-image:radial-gradient(orange,rgb(146, 78, 0));
+       }
+    .item-1{
+        grid-area: gkone;
+    }
+    .item-2{
+        grid-area: gktwo;
+    }
+    .item-4{
+        grid-area: one;
+    }
+    .item-5{
+        grid-area: two;
+    }
+    .item-6{
+        grid-area:midone;
+    }
+    .item-7{
+        grid-area:midtwo;
+    }
+    .item-15{
+        grid-area: forone;
+    }
+    .item-16{
+        grid-area: fortwo;
+    }
+ }
+
+@media (min-width:900px){
+   *{
+    margin:0;
+    border: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+img{
+    height: 400px;
+    width: 250px;
+    background-image:radial-gradient(orange,rgb(146, 78, 0));
+}
+
+.gk{
+    display: grid;
+    grid-template-areas: 'gkone gktwo gkthree';
+    gap: 20px;
+
+}
+ .gk div{
+    background-image:radial-gradient(orange,rgb(146,78,0));
+ }
+.item-1{
+    grid-area: gkone;
+    
+}
+.item-2{
+    grid-area: gktwo;
+    
+
+}
+.item-3{
+    grid-area:gkthree;
+    
+}
+h1{
+    text-align: center;
+    background-color: orange;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+img{
+    margin: 20px;
+    width: 100%;
+    margin-bottom: 0;
+    
+}
+.def{
+    display: grid;
+    grid-template-areas: 'one two three'
+                          'four five six';
+    gap: 20px;
+    
+}
+.item-4{
+    grid-area: one;
+    background-image:radial-gradient(orange,rgb(146,78,0));
+}
+.item-5{
+    grid-area: two;
+    background-image:radial-gradient(orange,rgb(146,78,0));
+}
+.item-20{
+    grid-area: three;
+    background-image:radial-gradient(orange,rgb(146,78,0));
+    
+}
+.item-9,.item-22,.item-28,.item-21{
+    background-image:radial-gradient(orange,rgb(146,78,0));
+}
+.mid{
+    display: grid;
+    grid-template-areas: 'midone midtwo midthree'
+                          'midfour midfive midsix';
+    gap: 20px;
+}
+.mid div{
+    background-image:radial-gradient(orange,rgb(146,78,0));
+     }
+.forw{
+    display: grid;
+    grid-template-areas: 'forone fortwo forthree'
+                          'forfour forfive forsix';
+    gap: 20px;
+}
+   .forw div{
+    background-image:radial-gradient(orange,rgb(146,78,0));
+     }
+h3{
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-variant: small-caps;
+    background-color: black;
+    color: #fff;
+    width: 100%;
+    margin: 10px;
+    
+
+    
+}
+}
