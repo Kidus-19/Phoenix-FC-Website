@@ -1,0 +1,47 @@
+
+@media (max-width:800px){
+    td{
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+    .imag{
+        display: flex;
+        
+    }
+    .edit{
+        display: block;
+    }
+    .delete{
+        display: block;
+    }
+    .id,.fname,.lname,.desc,.age,.status,.operation{
+        display: none;
+    }
+}
+.cont{
+    width: 90vw;
+    height: 90vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+}
+table{
+    border: 1px solid black;
+    width: 80vw;
+}
+img{
+    height: 100px;
+    width: 100px;
+}
+td{
+    max-height: 100px;
+    overflow: auto;
+}
+tr{
+    max-height: 100px;
+}
+tr:nth-child(even){
+    background-color: rgb(243, 243, 243);
+}

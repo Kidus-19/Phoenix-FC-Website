@@ -1,0 +1,27 @@
+.wrapper{
+    display: grid;
+    grid-template-areas: 'one two';
+    justify-content: end;
+    align-content: end;
+    }
+h3{
+    /* font-size: 1.2rem; */
+    margin-bottom: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-variant: small-caps;
+    color: orangered;
+}
+input{
+    font-size: 1.3rem;
+    border-radius: 10vw;
+    border: none;
+    border-bottom: 1px solid black;
+    border-left: 1px solid orange;
+}
+input[type="submit"]{
+    margin-top: 10px;
+}
+body{
+    background-image:url(../images/celebrate.jpg);
+    background-size: cover;
+}
