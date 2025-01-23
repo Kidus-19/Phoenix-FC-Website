@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap");
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.main-section {
+  display: grid;
+  grid-template-areas:
+    "left right"
+    "merch merch"
+    "toolbox toolbox"
+    ". ."
+    "merches merches";
+}
+.dream {
+  display: none;
+}
+.sidepic,
+.nextpic {
+  display: none;
+}
+.left {
+  margin: 5%;
+  grid-area: left;
+}
+.right {
+  grid-area: right;
+  position: relative;
+  bottom: -35px;
+  left: -30px;
+}
+.image2 {
+  cursor: pointer;
+}
+
+.image4 {
+  width: 15%;
+}
+p.lbl1 {
+  position: relative;
+  left: 55px;
+  bottom: 60px;
+  font-size: medium;
+}
+p.lbl2 {
+  position: relative;
+  left: 55px;
+  bottom: 75px;
+  font-size: x-small;
+}
+.get-your-merch {
+  grid-area: merch;
+  background-color: black;
+  color: white;
+  text-align: center;
+  position: relative;
+  bottom: 90px;
+  letter-spacing: 1mm;
+  animation: anim 3s infinite;
+  padding-bottom: 20px;
+}
+.toolbox {
+  grid-area: toolbox;
+  position: relative;
+  left: 4px;
+  bottom: 50px;
+}
+.seller {
+  background-color: transparent;
+  border: 1px solid #b5b5b5;
+  color: #242424;
+  width: 49%;
+  font-size: 1rem;
+  height: 3.25rem;
+  cursor: pointer;
+  position: relative;
+  top: -10px;
+  left: 105px;
+  font-family: "Oswald", sans-serif;
+}
+.merches {
+  grid-area: merches;
+  overflow-y: scroll;
+  height: 69vh;
+  border-radius: 10px;
+  position: relative;
+  bottom: 60px;
+}
+.shirt {
+  width: 90%;
+  position: relative;
+  top: 45px;
+  left: 50px;
+}
+.d1 {
+  position: relative;
+  bottom: 80px;
+  left: 220px;
+  font-size: larger;
+  letter-spacing: 1mm;
+  font-family: "Oswald", sans-serif;
+}
+.p1 {
+  font-family: "Courier New", Courier, monospace;
+  position: relative;
+  bottom: 85px;
+  left: 220px;
+  font-size: 15px;
+  font-family: "Oswald", sans-serif;
+}
+.s1 {
+  position: relative;
+  left: -3px;
+  bottom: -3px;
+  font-size: 10px;
+  font-family: "Oswald", sans-serif;
+}
+.fmenu {
+  display: none;
+}
+.add-to-cart {
+  position: relative;
+  bottom: 170px;
+  left: 450px;
+}
+button.purchase {
+  width: 70%;
+  position: relative;
+  bottom: 130px;
+  left: 350px;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 0 0 1px 1px black;
+  border-radius: 10px;
+  font-family: "Oswald", sans-serif;
+}
+.m1 {
+  padding-right: 79%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 1px black;
+  position: relative;
+  left: 1px;
+  bottom: -10px;
+  height: 25vh;
+}
+div.purchase {
+  opacity: 200%;
+  width: 30%;
+  min-height: 50%;
+  background-color: whitesmoke;
+  border-radius: 30px;
+  box-shadow: 4px 0px 4px 4px grey;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  text-justify: center;
+  position: relative;
+  bottom: 1790px;
+  left: 350px;
+}
+.buy {
+  position: fixed;
+  width: 100%;
+  min-height: 50%;
+  padding: 20px;
+}
+
+@keyframes anim {
+  from {
+    color: white;
+  }
+  to {
+    color: orange;
+  }
+}
+/*DESKTOP*/
+@media (min-width: 900px) {
+  .dream {
+    color: black;
+    position: relative;
+    top: -119px;
+    left: 482px;    
+    font-family: "Oswald", sans-serif;
+    font-size: 25px;
+    display: block;
+  }
+  body {
+    overflow: hidden;
+  }
+  .main-section {
+    width: 100vh;
+  }
+  .filter {
+    display: none;
+  }
+  .seller {
+    position: relative;
+    bottom: -20px;
+    left: 60px;
+    width: 20%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 1px #b5b5b5;
+  }
+  .get-your-merch {
+    position: relative;
+    bottom: 100px;
+    width: 208%;
+    padding-bottom: 20px;
+  }
+  .image4 {
+    width: 50px;
+  }
+  .right {
+    padding-left: 330%;
+    position: relative;
+    top: 11%;
+    left: 470px;
+  }
+  .image2 {
+    position: relative;
+    top: 23px;
+    left: -42px;
+  }
+  .shirt {
+    width: 140px;
+    position: relative;
+    top: 40px;
+    left: 100px;
+  }
+  .d1 {
+    position: relative;
+    bottom: 150px;
+    left: 360px;
+    font-size: 30px;
+    letter-spacing: 1mm;
+    width: 300px;
+  }
+  .p1 {
+    font-family: "Courier New", Courier, monospace;
+    position: relative;
+    bottom: 150px;
+    left: 360px;
+    font-size: 20px;
+  }
+  .s1 {
+    position: relative;
+    right: 10px;
+    font-size: 10px;
+  }
+  .fmenu {
+    display: block;
+    position: relative;
+    bottom: 123px;
+  }
+  table {
+    width: 230px;
+    height: 500px;
+    position: relative;
+    bottom: 80px;
+    left: 30px;
+    font-size: medium;
+  }
+  .gender {
+    position: relative;
+    bottom: 180px;
+    left: 10px;
+  }
+  .kit-type {
+    position: relative;
+    bottom: 40px;
+    left: -80px;
+  }
+  button.purchase {
+    position: relative;
+    left: 900px;
+    bottom: 250px;
+    background-color: white;
+    box-shadow: 0 0 15px 1px #b5b5b5;
+    border-radius: 10px;
+    font-size: 1rem;
+    height: 3.05rem;
+    display: block;
+  }
+  .sidepic {
+    display: block;
+    height: 60vh;
+    border-radius: 10px;
+  }
+  .merches {
+    overflow-y: scroll;
+    height: 69vh;
+    width: 167%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 1px white;
+    position: relative;
+    left: 290px;
+    bottom: 1120px;
+  }
+  .m1 {
+    height: 35vh;
+  }
+  .nextpic {
+    display: block;
+    width: 266px;
+    position: absolute;
+    margin-top: -100px;
+    animation: anima 3s infinite;
+  }
+  @keyframes anima {
+    from {
+      margin-top: -150px;
+    }
+    to {
+      margin-top: -100px;
+    }
+  }
+  div.purchase {
+    margin-top: 185px;
+    margin-left: 170px;
+  }
+}
