@@ -1,0 +1,34 @@
+.wrapper{
+    display: grid;
+    grid-template-areas:'one two';
+    justify-content:end;
+    align-content:end;
+    gap: 20px;
+    }
+
+input{
+    font-size: 1.3rem;
+    border-radius: 10vw;
+    border: none;
+    border-bottom: 1px solid black;
+    border-left: 1px solid orange;
+}
+input[type="submit"]{
+    margin-top: 15px;
+}
+body{
+    background-image: url(../images/celebrate.jpg);
+    background-size: cover;
+}
+label{
+    margin-bottom: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-variant: small-caps;
+    color: orangered;
+}
+.left{
+    grid-area: one;
+}
+.img{
+    grid-area: two;
+}
