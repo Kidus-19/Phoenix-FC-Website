@@ -4,38 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="store.css">
+    <title>Official Merchandise Store</title> <!-- Clearer title for the page -->
+    <link rel="stylesheet" href="store.css"> <!-- Link to external CSS for styling -->
 </head>
 <body>
     
 <!-- Store section -->
+<section class="store-section">
+    <h2 class="store-heading">Official Store</h2> <!-- Heading for the store section -->
+    
+    <div class="store-carousel"> <!-- Container for the merchandise carousel -->
+        <!-- Store item 1 -->
+        <div class="store-item active">
+            <img src="pics/shirt.png" alt="Merchandise 1" class="store-item-image"> <!-- Merchandise image -->
+            <h3 class="store-item-title">Shirt</h3> <!-- Title of the merchandise -->
+            <p class="store-item-desc">Description of Merchandise 1</p> <!-- Description of the merchandise -->
+        </div>
+        
+        <!-- Store item 2 -->
+        <div class="store-item">
+            <img src="pics/hoodie.png" alt="Merchandise 2" class="store-item-image">
+            <h3 class="store-item-title">Hoodie</h3>
+            <p class="store-item-desc">Description of Merchandise 2</p>
+        </div>
+        
+        <!-- Store item 3 -->
+        <div class="store-item">
+            <img src="pics/boot.png" alt="Merchandise 3" class="store-item-image">
+            <h3 class="store-item-title">Boots</h3>
+            <p class="store-item-desc">Description of Merchandise 3</p>
+        </div>
 
-  <section class="store-section">
-    <h2 class="store-heading">Official Store</h2>
-    <div class="store-carousel">
-      <div class="store-item active">
-        <img src="pics/shirt.png" alt="Merchandise 1">
-        <h3 class="store-item-title">Shirt</h3>
-        <p class="store-item-desc">Description of Merchandise 1</p>
-      </div>
-      <div class="store-item">
-        <img src="pics/hoodie.png" alt="Merchandise 2">
-        <h3 class="store-item-title">Hoodie</h3>
-        <p class="store-item-desc">Description of Merchandise 2</p>
-      </div>
-      <div class="store-item">
-        <img src="pics/boot.png" alt="Merchandise 3">
-        <h3 class="store-item-title">Boots</h3>
-        <p class="store-item-desc">Description of Merchandise 3</p>
-      </div>
-
-
-      <button class="prev-button">&#10094;</button>
-      <button class="next-button">&#10095;</button>
+        <!-- Navigation buttons for the carousel -->
+        <button class="prev-button" aria-label="Previous Item">&#10094;</button> <!-- Button to go to the previous item -->
+        <button class="next-button" aria-label="Next Item">&#10095;</button> <!-- Button to go to the next item -->
     </div>
-    <button class="store-button">Shop Now</button>
-  </section>
-  <script src="store.js"></script>
+
+    <button class="store-button">Shop Now</button> <!-- Button to direct users to the shop -->
+</section>
+
+<script src="store.js"></script> <!-- Link to external JavaScript for functionality -->
 </body>
 </html>
