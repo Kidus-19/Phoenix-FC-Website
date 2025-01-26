@@ -1,0 +1,8 @@
+.cover{
+    overflow: scroll;
+}
+.addFixtures{
+    width: max-content;
+    position: absolute;
+    top: 1vh;
+}

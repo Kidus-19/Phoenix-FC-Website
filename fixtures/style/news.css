@@ -1,0 +1,230 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  word-spacing: 9px;
+}
+body {
+}
+.wrapper {
+  width: 100vw;
+  padding-top: 1vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  box-sizing: border-box;
+  min-height: max-content;
+  display: grid;
+  background-color: whitesmoke;
+  /* background-image: linear-gradient(
+    90deg,
+    rgb(153, 202, 153),
+    rgb(211, 211, 174),
+    rgb(144, 189, 144)
+  ); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr 1fr; */
+  row-gap: 20vh;
+  padding-top: 20vh;
+  grid-template-areas: 'main main main other'
+                        'main main main other'
+                        'main main main other';
+                        align-content: space-around;
+}
+
+main {
+  width: 95%;
+  height: max-content;
+  background-color: white;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  align-content: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  grid-area: main;
+  box-shadow: 1px 1px 1px 1px rgb(172, 172, 172);
+  border-radius: 10px;
+}
+main img.share{
+  width: 50px;
+
+  border-radius: 10px;
+  background-color: rgb(255, 255, 177);
+  padding: 7px;
+}
+main img.share:hover{
+  background-color: rgb(158, 255, 158);
+}
+div.wrapper main figure img {
+  /* background-image: url(); */
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px 1px rgb(172, 172, 172);
+  box-shadow: inset;
+}
+main h1.title {
+  text-align: center;
+  color: rgb(0, 36, 0);
+}
+main p.date {
+  text-align: end;
+}
+main article {
+  width: 80%;
+  align-self: center;
+  font-size: 1.3rem;
+  padding-bottom: 5vh;
+}
+
+aside.other {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  /* background-color: rgb(255, 255, 255); */
+  margin-bottom: 5vh;
+  width: 95%;
+  gap: 20px;
+  border: 1px solid rgb(197, 197, 197);
+  grid-area: other;
+  padding: 2%;
+  border-radius: 10px;
+  filter:brightness(80%);
+  
+}
+aside section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  /* background-color: rgb(255, 255, 255); */
+  margin-bottom: 5vh;
+  width: 95%;
+  gap: 20px;
+  padding: 2%;
+  border-radius: 10px;
+  
+}
+aside.other figure img {
+  min-width: 333px;
+  opacity: 0%;
+  display: none;
+  border-radius: 10px;
+  box-shadow: 10px 10px 8px 10px #000000;
+}
+aside.other figure {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* height: 300px; */
+  width: 300px;
+  height: 200px;
+  background-color: white;
+  border-radius: 10px;
+  width: max-content;
+  align-self: center;
+  padding-bottom: 10px;
+  display: grid;
+  text-align: center;
+  background-image: url("../img/fight.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: baseline;
+  align-items: baseline;
+  box-shadow: 2px 2px 2px 2px #bdbdbd;
+  
+}
+ aside.other h2{
+  text-align: center;
+  align-self: center;
+  
+  border-radius: 10px;
+  width: 90%;
+  box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2);
+  font-size: 1.5rem;
+  
+  align-self: center;
+  background-color: rgb(255, 255, 255);
+} 
+aside.other figure:hover {
+  background-size: 150%;
+}
+aside.other figcaption {
+  background-color: rgba(22, 22, 22, 0.89);
+  background-image: linear-gradient(180deg,transparent,rgba(0, 0, 0, 0.897),rgba(0, 0, 0, 0.897));
+  /* background-image: linear-gradient(180deg, yellow, green); */
+  height: min-content;
+  height: 30%;
+  position: relative;
+  top: 76%;
+  justify-self: end;
+  align-self: baseline;
+  color: white;
+  border-radius: 0px 0px 10px 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* aside.other figcaption:hover{
+  height: 50%;
+  top: 56%;
+} */
+section figure p {
+  color: rgb(199, 199, 199);
+  padding: 0px 10px;
+  /* background-color: rgba(255, 255, 255, 0.952); */
+}
+button.more {
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2);
+  font-size: 1.5rem;
+  border-radius: 20px;
+  align-self: center;
+  background-color: rgb(255, 255, 135);
+  border: 0px;
+  margin: 3%;
+  padding: 5px;
+}
+button.more:hover {
+  animation-name: buttonhover;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  background-color: rgb(155, 255, 125);
+}
+@keyframes buttonhover {
+  from {
+    background-color: rgb(255, 255, 135);
+  }
+  to {
+    background-color: rgb(155, 255, 125);
+  }
+}
+button img {
+  width: 20px;
+}
+@media (max-width:768px) {
+  .wrapper {
+    width: 100vw;
+    min-height: max-content;
+    display: grid;
+    background-color: rgb(255, 255, 255);
+    background-image: linear-gradient(
+      90deg,
+      rgb(153, 202, 153),
+      rgb(211, 211, 174),
+      rgb(144, 189, 144)
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    grid-template-areas: 'main '
+                          ' other';
+                          align-content: space-around;
+  }
+   
+}

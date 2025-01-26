@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap");
+
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: "Oswald", sans-serif;
+
+    word-spacing: 9px;
+    /* background-color: red; */
+}
+body{
+
+    /* background-image: url('../img/beforeGame.jpg'); */
+    background-color: #fffbfb;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 100vh;
+    width: 100vw;
+}
+.wrapper{
+    background-color: transparent;
+    display: grid;
+    gap: 10vh;
+    margin-top: 10vh;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 10vh;
+    grid-template-areas: 'main aside';
+    /* height: 100vh; */
+    width: 100vw;
+    overflow: hidden;
+    /* background-image:linear-gradient(90deg,#fffeb8,#fecc3d,#fde50e,#c30906,#c30906,#fde50e,#fecc3d,#fffeb8); */
+    /* background-image:radial-gradient(#c30906,#fde50e,#fecc3d,#fffeb8); */
+}
+.wrapper main{
+    background-color: rgb(255, 255, 255);
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+    width: 70vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 3px 1px rgb(207, 207, 207);
+    border-radius: 5px;
+    height: 60vh;
+    /* background-image: url("img/logo3.jpg"); */
+    padding: 5vh 2vh;
+}
+main section{
+    display: flex;
+    gap: 10%;
+    padding: 3%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.8vw;
+    grid-area: section;
+   
+    }
+main section figure {
+    width: max-content;
+    /* background-color: green; */
+    /*! box-shadow: 0px 15px 20px 1px; */
+}
+main section figure img.logo{
+    width: 10vw;
+    /*! box-shadow: 0px 3px 31px 1px; */
+    /*! border-radius: 0px 0px 95px 95px; */
+}
+main .vs{
+    font-size: 10vw;
+    background-image: linear-gradient(180deg,red,black);
+    background-clip: text;
+    color: transparent;
+    /* animation-name: visible; */
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+button{
+    background-color: white;
+    border: none;
+    font-size: 2.5vw;
+    margin: 3vh;
+    background-image: linear-gradient(0deg,red,orange);
+    color: white;
+    padding: 2px 4vw;
+    border-radius: 20rem;
+    word-spacing: .1rem;
+    box-shadow: 2px 2px 2px rgb(124, 99, 31);
+    animation-name: visible;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+}
+main button:hover{
+    color: white;
+    border: none;
+    background-image: linear-gradient(180deg,red,orange);
+}
+input {
+    display: none;
+}
+.wrapper aside{
+    display: flex;
+}
+.wrapper aside main{
+    height: max-content;
+    width: max-content;
+}
+aside{
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+    border: 1px solid green;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    grid-area: aside;
+    padding: 5px;
+}
+aside main{
+    padding: .5vw .5vw;
+    box-shadow: none;
+}
+aside main section figure img.logo{
+    height: 5vw;
+    width: 5vw;
+    display: none;
+}
+
+aside section{
+    display: flex;
+    gap: 10%;
+    padding: 3%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1vw;
+    }
+aside .vs{
+    font-size: 2vw;
+    background-image: linear-gradient(180deg,red,black);
+    background-clip: text;
+    color: transparent;
+}
+aside button{
+    border: none;
+    display: none;
+    font-size: 1vw;
+}
+aside figure.home{
+    animation-name: none;
+}
+aside figure.opponent{
+    animation-name: none;
+}
+aside main p.detail{
+    display: none;
+}
+
+aside main:hover section figure img.logo{
+    display: block;
+}
+aside main:hover button{
+    display: block;
+}
+p.detail{
+    display: block;
+}
+figure.home{
+    animation-name: enter;
+    position: relative;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+figure.opponent{
+    animation-name: enter2;
+    position: relative;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+p.detail{
+    font-size: 1.3vw;
+    color: grey;
+    animation-name: visible;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+}
+@keyframes visible {
+    from{
+        opacity: 0%;
+        box-shadow: none;
+    }
+    to{
+        display: block;
+    }
+}
+@keyframes enter {
+    from{
+        left: -50vw;
+    }
+    to{
+        left: 0;
+    }
+}
+@keyframes enter2 {
+    from{
+        left: 50vw;
+    }
+    to{
+        left: 0;
+    }
+}
+
+@media (max-width:768px) {
+    .wrapper{
+        padding: 1vw;
+        width: 100vw;
+        grid-template-areas: 'main'' aside';
+    }
+   .wrapper main{
+        width: 80vw;
+        height: 40vh;
+    }
+    .wrapper aside main {
+        width: 90%;
+        justify-content: center;
+        font-size: .8rem;
+    }
+    aside .vs{
+        font-size: 1rem;
+    }
+    aside main section figure img.logo{
+        display: block;
+    }
+    aside main button{
+        display: block;
+    }
+    aside main section figure.opponent{
+        justify-content: center;
+    }
+    aside main section figure.home{
+        justify-content: center;
+    }
+    p.detail{
+        display: block;
+    }
+    
+}

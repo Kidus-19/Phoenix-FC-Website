@@ -1,0 +1,178 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    word-spacing: 9px;
+
+}
+.wrapper{
+    max-width: 100vw;
+    min-height: 100vh;
+    padding: 3vh 5vw;
+    align-content: center;
+    justify-content: center;
+    /* background-image: url('../img/emptyStadium.png'); */
+    background-color: rgb(225, 255, 224);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.wrapper form h1{
+    text-align: center;
+    margin: 2vh;
+    font-size: 3rem;
+    text-transform: uppercase;
+    background-image: linear-gradient(180deg,rgb(78, 172, 78),rgb(150, 150, 71));
+    background-clip: text;
+    color: transparent;
+    grid-area: pageName;
+}
+form{
+    display: grid;
+    width: 100%;
+    height: max-content;
+    border-radius: 20px;
+    align-content: center;
+    justify-content: center;
+    /* grid-template-rows: .5fr 10fr 1fr; */
+    grid-template-columns: 1fr 4fr ;
+    background-color: rgb(237, 238, 210);
+    grid-template-areas:'pageName pageName' 
+                        'title description'
+                        'img    description'
+                        'other other';
+                        gap: 20px;
+    opacity: 100%;
+    padding: 2vw;
+    box-shadow: 2px 2px 2px 2px rgb(184, 184, 184);
+}
+div.ball{
+    height: 4vw;
+    width:4vw;
+    display: none;
+    border-radius: 2.5vw;
+    background-color: red;
+    box-shadow: .3vw .3vw .3vw grey;
+    background-image: url('../img/ballPat.jpg');
+    background-position: center;
+    background-size: cover;
+    
+    grid-area: ball;
+}
+figure {
+    height: 50vh;
+    border-radius: 1.1rem;
+    font-size: 1rem;
+    grid-area: img;
+    initial-value: url('../img/edit.png');
+    /* background-image: url("../img/search.png"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: rgb(0, 82, 0);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid green;
+    overflow: hidden;
+    text-align: center;
+    
+}
+figure input{
+    display: none;
+    align-self: baseline;
+}
+figure h2{
+    font-size: 3.5rem;
+    width: min-content;
+}
+textarea{
+    border: 1px solid green;
+}
+input:focus{
+    border: none;
+    border:1px solid yellow;
+}
+input.title{
+    font-size: 1.3rem;
+    border-radius: 1.1rem;
+    padding: .5rem;
+    grid-area: title;
+    border: 1px solid green ;
+    box-shadow: 2px 2px 2px rgb(185, 185, 185);
+}
+input.title:focus{
+    border: 1px solid yellow;
+}
+textarea{
+    font-size: 1.1rem;
+    padding: 1rem;
+    height: 60vh;
+    border-radius: 1.1rem;
+    grid-area: description;
+}
+div.other{
+    display: flex;
+    grid-area: other;
+    justify-self: center;
+    width: 50%;
+    justify-content: space-around;
+}
+div.other input{
+    /* background-image: linear-gradient(180deg,green,yellow); */
+    background-color: white;
+    border: 3px solid yellow;
+    color: green;
+    font-size: 1.3rem;
+    width: 40%;
+    border-radius: 1.1rem;
+    padding: .5rem;
+    grid-area: title;
+    background-color: white;
+}
+div.other input:hover{
+    background-color: green;
+    color: yellow;
+    border: none;
+}
+@media (max-width:768px) {
+    .wrapper{
+        max-width: 100vw;
+        min-height: 100vh;
+        padding: 5vh;
+        align-content: center;
+        justify-content: center;
+        /* background-image: url('../img/emptyStadium.png'); */
+        background-color: rgb(247, 247, 247);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    form{
+        padding: 1vh 1vh;
+        width: 100%;
+        /* max-height: 120vh; */
+        grid-template-columns: 100% ;
+        grid-template-areas:'pageName' 
+                            'title'
+                            'img'
+                            ' description'
+                            'other';
+    }
+    div.other{
+        width: 100%;
+        text-align: center;
+    }
+    figure input{
+        align-self:flex-end;
+        font-size: 1rem;
+        background-color: white;
+        width: 100%;
+    }
+}
+
+
