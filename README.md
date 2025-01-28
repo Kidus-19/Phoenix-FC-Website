@@ -11,3 +11,9 @@
 - League Standings: Updated tables and rankings for various leagues and tournaments.
 - Ticketing Information: Details on how to purchase tickets for upcoming matches.
 - Mobile Compatibility: A responsive design for optimal viewing on mobile devices.
+
+
+authors
+Eyob Kebede
+Kidus Yohannes
+Musie Mengesha
