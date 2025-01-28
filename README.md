@@ -13,7 +13,8 @@
 - Mobile Compatibility: A responsive design for optimal viewing on mobile devices.
 
 
-authors
-Eyob Kebede
-Kidus Yohannes
-Musie Mengesha
+authors:
+
+-Eyob Kebede
+-Kidus Yohannes
+-Musie Mengesha
