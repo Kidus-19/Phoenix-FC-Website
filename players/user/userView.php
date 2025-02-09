@@ -5,120 +5,92 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Members</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-            <?php
-               include('../../connect.php');
-               
-               $conn = new connect;
-               $connection = $conn->getConn();
-                  if(!$conn){
-                      die('error'.mysqli_connect_error());
-                     }
-                 $query="SELECT `id`,`PicLocation`,`Status`,`FName`,`LName` FROM `team` WHERE `id`>0";
-
-                  $result=$connection->query($query);
-                   $data = [];
-                   if($result->num_rows>0){
+    <?php
+    include('../../connect.php');
     
-              while($row=$result->fetch_assoc()){
-                      $data[]=$row;
-                         } 
-                         }
+    $conn = new connect;
+    $connection = $conn->getConn();
+    if (!$conn) {
+        die('Error: ' . mysqli_connect_error());
+    }
+    $query = "SELECT `id`, `PicLocation`, `Status`, `FName`, `LName` FROM `team` WHERE `id` > 0";
+    $result = $connection->query($query);
+    $data = [];
 
-              if(isset($data)){
-                        
-                        
-                         echo '<div class="container">';
-                         echo '<h1>'.'GOALKEEPERS'.'</h1>';
-                         echo '<div class="gk" >';
-                
-                   foreach($data as $img){
-                            $status = $img['Status'];
-                            $id=($img['id']);
-                            $class=$status;
-                            $class_name="item-".$id;
-                           if($status=='goalkeeper'){
-                            echo'<div class="'.$class_name.'">';
-                            echo'<a href="DetailPage.php?id='.$id.'"><img  src="../images/'.$img['PicLocation']. '" class="' . $class . '" /></a>';
-                            echo'<h3>'.$img['FName'].' '.' '.$img['LName'].'</h3>';
-                            echo'</div>';
-                           
-                            
-                           }  
-                        }
-                         
-                         echo'</div>';
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $data[] = $row;
+        }
+    }
+
+    if (isset($data)) {
+        echo '<div class="container mt-5">';
         
-                        echo '<h1>'.'DEFENDERS'.'</h1>';
-                         echo '<div class="def">';
-                         
-                        foreach($data as $img){
-                            $status = $img['Status'];
-                            $id=$img['id'];
-                            $class_name="item-".$id;
-                            $class=$status;
-                           if($status=='defender'){
-                           echo'<div class="'.$class_name.'">';
-                            echo'<a href="DetailPage.php?id='.$id.'"><img src="../images/'.$img['PicLocation']. '" class="' . $class . '" /></a>';
-                            echo'<h3>'.$img['FName'].' '.' '.$img['LName'].'</h3>';
-                            echo'</div>';
-                           
-                            
-                           }  
-                        }
-            
-                        echo '</div>';
-                        echo '<h1>'.'MIDFIELDERS'.'</h1>';
-                        echo'<div class="mid">';
-                        foreach($data as $img){
-                            $status = $img['Status'];
-                            $id=$img['id'];
-                            $class_name="item-".$id;
-                            $class=$status;
-                           if($status=='midfilder'){
-                            echo'<div class="'.$class_name.'">';
-                            echo'<a href="DetailPage.php?id='.$id.'"><img  src="../images/'.$img['PicLocation']. '" class="' . $class . '" /></a>';
-                            echo'<h3>'.$img['FName'].' '.' '.$img['LName'].'</h3>';
-                            echo'</div>';
-                           
-                            
-                           }  
-                        }
-                        
-                        echo '</div>';
-                        echo '<h1>'.'FORWARDS'.'</h1>';
-                        echo'<div class="forw">';
-                        foreach($data as $img){
-                            $status = $img['Status'];
-                            $id=$img['id'];
-                            $class_name="item-".$id;
-                            $class=$status;
-                           if($status=='forward'){
-                              echo'<div class="'.$class_name.'">';
-                            echo'<a href="DetailPage.php?id='.$id.'"><img id=" pictures" src="../images/'.$img['PicLocation']. '" class="' . $class . '" /></a>';
-                            echo'<h3>'.$img['FName'].' '.' '.$img['LName'].'</h3>';
-                            echo'</div>';
-                           
-                            
-                           }  
-                        }
-                        
-                        echo'</div>';
-                       
+        // Goalkeepers
+        echo '<h1 class="text-center">GOALKEEPERS</h1>';
+        echo '<div class="row text-center">';
+        foreach ($data as $img) {
+            if ($img['Status'] == 'goalkeeper') {
+                echo '<div class="col-md-3 mb-4">';
+                echo '<a href="DetailPage.php?id=' . $img['id'] . '">';
+                echo '<img src="../images/' . htmlspecialchars($img['PicLocation']) . '" class="img-fluid" />';
+                echo '<h3>' . htmlspecialchars($img['FName']) . ' ' . htmlspecialchars($img['LName']) . '</h3>';
+                echo '</a></div>';
+            }
+        }
+        echo '</div>';
 
-                        
-                     } 
+        // Defenders
+        echo '<h1 class="text-center">DEFENDERS</h1>';
+        echo '<div class="row text-center">';
+        foreach ($data as $img) {
+            if ($img['Status'] == 'defender') {
+                echo '<div class="col-md-3 mb-4">';
+                echo '<a href="DetailPage.php?id=' . $img['id'] . '">';
+                echo '<img src="../images/' . htmlspecialchars($img['PicLocation']) . '" class="img-fluid" />';
+                echo '<h3>' . htmlspecialchars($img['FName']) . ' ' . htmlspecialchars($img['LName']) . '</h3>';
+                echo '</a></div>';
+            }
+        }
+        echo '</div>';
 
-            ?>
+        // Midfielders
+        echo '<h1 class="text-center">MIDFIELDERS</h1>';
+        echo '<div class="row text-center">';
+        foreach ($data as $img) {
+            if ($img['Status'] == 'midfielder') {
+                echo '<div class="col-md-3 mb-4">';
+                echo '<a href="DetailPage.php?id=' . $img['id'] . '">';
+                echo '<img src="../images/' . htmlspecialchars($img['PicLocation']) . '" class="img-fluid" />';
+                echo '<h3>' . htmlspecialchars($img['FName']) . ' ' . htmlspecialchars($img['LName']) . '</h3>';
+                echo '</a></div>';
+            }
+        }
+        echo '</div>';
+
+        // Forwards
+        echo '<h1 class="text-center">FORWARDS</h1>';
+        echo '<div class="row text-center">';
+        foreach ($data as $img) {
+            if ($img['Status'] == 'forward') {
+                echo '<div class="col-md-3 mb-4">';
+                echo '<a href="DetailPage.php?id=' . $img['id'] . '">';
+                echo '<img src="../images/' . htmlspecialchars($img['PicLocation']) . '" class="img-fluid" />';
+                echo '<h3>' . htmlspecialchars($img['FName']) . ' ' . htmlspecialchars($img['LName']) . '</h3>';
+                echo '</a></div>';
+            }
+        }
+        echo '</div>';
+
+        echo '</div>'; // Close container
+    }
+    ?>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
- 
