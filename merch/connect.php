@@ -15,6 +15,4 @@ class Connect{
     }
     
 }
-/* $conn=new Connect;
-$conn->getConnection(); */
 ?>
